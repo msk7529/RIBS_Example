@@ -19,7 +19,7 @@ final class NavigationControllerable: ViewControllable {
 extension ViewControllable {
   
   func present(_ viewControllable: ViewControllable, animated: Bool, completion: (() -> Void)?) {
-    self.uiviewController.present(viewControllable.uiviewController, animated: true, completion: completion)
+    self.uiviewController.present(viewControllable.uiviewController, animated: animated, completion: completion)
   }
   
   func dismiss(completion: (() -> Void)?) {

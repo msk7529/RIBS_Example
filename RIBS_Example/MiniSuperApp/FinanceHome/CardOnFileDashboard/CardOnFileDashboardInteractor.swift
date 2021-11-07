@@ -22,6 +22,7 @@ protocol CardOnFileDashboardPresentable: Presentable {
 
 protocol CardOnFileDashboardListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
+    func cardOnFileDashboardDidTapAddPaymentMethod()
 }
 
 protocol CardOnFileDashboardInteractorDependency {
@@ -64,5 +65,10 @@ final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashb
         // 이렇게 해주면 위의 sink 클로저에 [weak self]를 하지 않아도 됨.
         cancellables.forEach { $0.cancel() }
         cancellables.removeAll()
+    }
+    
+    func didTapAddPaymentmethod() {
+        // 여기보다 financeHome에서 띄우는게 구조상 맞아보임
+        listener?.cardOnFileDashboardDidTapAddPaymentMethod()
     }
 }
