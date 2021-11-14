@@ -10,11 +10,11 @@ import ModernRIBs
 protocol CardOnFileDashboardDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
-    var cardsOnFileRepository: CardOnFileRepository { get }
+    var cardOnFileRepository: CardOnFileRepository { get }
 }
 
 final class CardOnFileDashboardComponent: Component<CardOnFileDashboardDependency>, CardOnFileDashboardInteractorDependency {
-    var cardsOnFileRepository: CardOnFileRepository { return dependency.cardsOnFileRepository }
+    var cardOnFileRepository: CardOnFileRepository { return dependency.cardOnFileRepository }
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 

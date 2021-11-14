@@ -26,7 +26,7 @@ protocol CardOnFileDashboardListener: AnyObject {
 }
 
 protocol CardOnFileDashboardInteractorDependency {
-    var cardsOnFileRepository: CardOnFileRepository { get }
+    var cardOnFileRepository: CardOnFileRepository { get }
 }
 
 final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashboardPresentable>, CardOnFileDashboardInteractable, CardOnFileDashboardPresentableListener {
@@ -52,7 +52,7 @@ final class CardOnFileDashboardInteractor: PresentableInteractor<CardOnFileDashb
         // TODO: Implement business logic here.
         super.didBecomeActive()
         
-        dependency.cardsOnFileRepository.cardOnFile.sink { methodModel in
+        dependency.cardOnFileRepository.cardOnFile.sink { methodModel in
             let viewModels = methodModel.prefix(5).map { PaymentMethodViewModel($0) }
             self.presenter.update(with: viewModels)
         }.store(in: &cancellables)

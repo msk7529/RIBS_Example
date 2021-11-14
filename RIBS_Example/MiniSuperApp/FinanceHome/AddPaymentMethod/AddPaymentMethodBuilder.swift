@@ -10,11 +10,11 @@ import ModernRIBs
 protocol AddPaymentMethodDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
-    var cardsOnFileRepository: CardOnFileRepository { get }
+    var cardOnFileRepository: CardOnFileRepository { get }
 }
 
 final class AddPaymentMethodComponent: Component<AddPaymentMethodDependency>, AddPaymentMethodInteractorDependency {
-    var cardsOnFileRepository: CardOnFileRepository { dependency.cardsOnFileRepository }
+    var cardOnFileRepository: CardOnFileRepository { dependency.cardOnFileRepository }
 }
 
 // MARK: - Builder
