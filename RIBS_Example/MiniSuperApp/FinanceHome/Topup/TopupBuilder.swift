@@ -12,13 +12,24 @@ protocol TopupDependency: Dependency {
     var cardOnFileRepository: CardOnFileRepository { get }
 }
 
-final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, AddPaymentMethodDependency {    
+final class TopupComponent: Component<TopupDependency>, TopupInteractorDependency, AddPaymentMethodDependency, EnterAmountDependency, CardOnFileDependency {
+    let paymentMethodModelStream: CurrentValuePublisher<PaymentMethodModel>
+    
     var cardOnFileRepository: CardOnFileRepository {
         return dependency.cardOnFileRepository
     }
     
     fileprivate var topupBaseViewController: ViewControllable {
         return dependency.topupBaseViewController
+    }
+    
+    var selectedPaymentMethodModel: ReadOnlyCurrentValuePublisher<PaymentMethodModel> {
+        return paymentMethodModelStream
+    }
+    
+    init(dependency: TopupDependency, paymentMethodModelStream: CurrentValuePublisher<PaymentMethodModel>) {
+        self.paymentMethodModelStream = paymentMethodModelStream
+        super.init(dependency: dependency)
     }
 }
 
@@ -35,11 +46,19 @@ final class TopupBuilder: Builder<TopupDependency>, TopupBuildable {
     }
 
     func build(withListener listener: TopupListener) -> TopupRouting {
-        let component = TopupComponent(dependency: dependency)
+        let paymentMethodModelStream = CurrentValuePublisher(PaymentMethodModel(id: "", name: "", digits: "", color: "", isPrimary: false))
+        let component = TopupComponent(dependency: dependency, paymentMethodModelStream: paymentMethodModelStream)
         let interactor = TopupInteractor(dependency: component)
         interactor.listener = listener
         
         let addPaymentMethodBuilder = AddPaymentMethodBuilder(dependency: component)
-        return TopupRouter(interactor: interactor, viewController: component.topupBaseViewController, addPaymentMethodBuildable: addPaymentMethodBuilder)
+        let enterAmountBuilder = EnterAmountBuilder(dependency: component)
+        let cardOnFileBuilder = CardOnFileBuilder(dependency: component)
+
+        return TopupRouter(interactor: interactor,
+                           viewController: component.topupBaseViewController,
+                           addPaymentMethodBuildable: addPaymentMethodBuilder,
+                           enterAmountBuildable: enterAmountBuilder,
+                           cardOnFileBuildable: cardOnFileBuilder)
     }
 }
