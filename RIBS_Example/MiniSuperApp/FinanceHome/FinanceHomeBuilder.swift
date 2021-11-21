@@ -7,17 +7,19 @@ protocol FinanceHomeDependency: Dependency {
 
 final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDashboardDependency, CardOnFileDashboardDependency, AddPaymentMethodDependency, TopupDependency {    
     let cardOnFileRepository: CardOnFileRepository
+    let superPayRepository: SuperPayRepository
     
     var balance: ReadOnlyCurrentValuePublisher<Double> {
-        return balancePublisher
+        return superPayRepository.balance
     }
     var topupBaseViewController: ViewControllable
-    
-    private let balancePublisher: CurrentValuePublisher<Double>
-    
-    init(dependency: FinanceHomeDependency, balance: CurrentValuePublisher<Double>, cardOnFileRepository: CardOnFileRepository, topupBaseViewController: ViewControllable) {
-        self.balancePublisher = balance
+        
+    init(dependency: FinanceHomeDependency,
+         cardOnFileRepository: CardOnFileRepository,
+         superPayRepository: SuperPayRepository,
+         topupBaseViewController: ViewControllable) {
         self.cardOnFileRepository = cardOnFileRepository
+        self.superPayRepository = superPayRepository
         self.topupBaseViewController = topupBaseViewController
         super.init(dependency: dependency)
     }
@@ -38,10 +40,11 @@ final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuild
     
     func build(withListener listener: FinanceHomeListener) -> FinanceHomeRouting {
         let viewController = FinanceHomeViewController()
-        
-        let balancePublisher = CurrentValuePublisher<Double>(10000)
-        
-        let component = FinanceHomeComponent(dependency: dependency, balance: balancePublisher, cardOnFileRepository: CardOnFileRepositoryImp(), topupBaseViewController: viewController)
+                
+        let component = FinanceHomeComponent(dependency: dependency,
+                                             cardOnFileRepository: CardOnFileRepositoryImp(),
+                                             superPayRepository: SuperPayRepositoryImp(),
+                                             topupBaseViewController: viewController)
         let interactor = FinanceHomeInteractor(presenter: viewController)
         interactor.listener = listener
         
