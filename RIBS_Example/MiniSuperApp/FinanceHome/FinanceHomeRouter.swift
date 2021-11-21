@@ -66,7 +66,7 @@ final class FinanceHomeRouter: ViewableRouter<FinanceHomeInteractable, FinanceHo
     func attachAddPaymentMethod() {
         if addPaymentMethodRouting != nil { return }
         
-        let router = addPaymentMethodBuildable.build(withListener: interactor)
+        let router = addPaymentMethodBuildable.build(withListener: interactor, closeButtonType: .close)
         let navigation = NavigationControllerable(root: router.viewControllable)
         navigation.navigationController.presentationController?.delegate = interactor.presentationDelegateProxy     // 아래로 내리는 제스처를 취했을때 detach가 불리지 않는 문제를 해결하고자 이런식으로 코드를 넣는다.
         viewControllable.present(navigation, animated: true, completion: nil)
