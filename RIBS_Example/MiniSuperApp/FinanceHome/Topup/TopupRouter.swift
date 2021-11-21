@@ -75,7 +75,14 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
         if enterAmountRounting != nil { return }
         
         let router = enterAmountBuildable.build(withListener: interactor)
-        presentInsideNavigation(router.viewControllable)
+        
+        if let navigation = navigationControllable {
+            navigation.setViewControllers([router.viewControllable])
+            resetChildRouting()
+        } else {
+            presentInsideNavigation(router.viewControllable)
+        }
+        
         attachChild(router)
         enterAmountRounting = router
     }
@@ -117,6 +124,18 @@ final class TopupRouter: Router<TopupInteractable>, TopupRouting {
         
         viewController.dismiss(completion: completion)
         self.navigationControllable = nil
+    }
+    
+    private func resetChildRouting() {
+        if let cardOnFileRouting = cardOnFileRouting {
+            detachChild(cardOnFileRouting)
+            self.cardOnFileRouting = nil
+        }
+        
+        if let addPaymentMethodRouting = addPaymentMethodRouting {
+            detachChild(addPaymentMethodRouting)
+            self.addPaymentMethodRouting = nil
+        }
     }
 
     // MARK: - Private
