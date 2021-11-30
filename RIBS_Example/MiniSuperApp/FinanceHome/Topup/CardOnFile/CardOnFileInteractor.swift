@@ -5,6 +5,7 @@
 //  Created by kakao on 2021/11/15.
 //
 
+import FinanceEntity
 import ModernRIBs
 
 protocol CardOnFileRouting: ViewableRouting {

@@ -6,15 +6,17 @@
 //
 
 import Foundation
+import FinanceEntity
 import Combine
+import CombineUtil
 
-protocol CardOnFileRepository {
+public protocol CardOnFileRepository {
     var cardOnFile: ReadOnlyCurrentValuePublisher<[PaymentMethodModel]> { get }
     
     func addCard(info: AddPaymentMethodInfo) -> AnyPublisher<PaymentMethodModel, Error>
 }
 
-final class CardOnFileRepositoryImp: CardOnFileRepository {
+public final class CardOnFileRepositoryImp: CardOnFileRepository {
     private let paymentMethodSubject = CurrentValuePublisher<[PaymentMethodModel]>([
 //        PaymentMethodModel(id: "0", name: "우리은행", digits: "0123", color: "#f19a38ff", isPrimary: false),
 //        PaymentMethodModel(id: "1", name: "신한카드", digits: "0987", color: "#3478f6ff", isPrimary: false),
@@ -23,11 +25,13 @@ final class CardOnFileRepositoryImp: CardOnFileRepository {
 //        PaymentMethodModel(id: "4", name: "카카오뱅크", digits: "8751", color: "#ffcc00ff", isPrimary: false)
     ])
     
-    var cardOnFile: ReadOnlyCurrentValuePublisher<[PaymentMethodModel]> {
+    public var cardOnFile: ReadOnlyCurrentValuePublisher<[PaymentMethodModel]> {
         return paymentMethodSubject
     }
     
-    func addCard(info: AddPaymentMethodInfo) -> AnyPublisher<PaymentMethodModel, Error> {
+    public init() { }
+    
+    public func addCard(info: AddPaymentMethodInfo) -> AnyPublisher<PaymentMethodModel, Error> {
         let paymentMethodModel = PaymentMethodModel(id: "00", name: "New 카드", digits: "\(info.number.suffix(4))", color: "", isPrimary: false)
         
         var new = paymentMethodSubject.value

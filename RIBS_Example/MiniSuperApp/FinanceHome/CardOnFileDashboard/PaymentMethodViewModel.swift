@@ -2,9 +2,10 @@
 //  PaymentMethodViewModel.swift
 //  MiniSuperApp
 //
-//  Created by kakao on 2021/10/27.
+//  Created on 2021/10/27.
 //
 
+import FinanceEntity
 import UIKit
 
 struct PaymentMethodViewModel {

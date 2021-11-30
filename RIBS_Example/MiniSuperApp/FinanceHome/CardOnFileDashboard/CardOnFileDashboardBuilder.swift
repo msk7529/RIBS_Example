@@ -5,6 +5,7 @@
 //  Created by kakao on 2021/10/27.
 //
 
+import FinanceRepository
 import ModernRIBs
 
 protocol CardOnFileDashboardDependency: Dependency {

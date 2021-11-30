@@ -1,3 +1,4 @@
+import FinanceEntity
 import UIKit
 
 struct SelectedPaymentMethodViewModel {
