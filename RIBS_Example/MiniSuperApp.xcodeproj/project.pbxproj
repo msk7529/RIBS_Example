@@ -104,6 +104,11 @@
 		C267B6B82741C2BB00D188E6 /* UITableView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Utils.swift"; sourceTree = "<group>"; };
 		C267B6BA2741C34100D188E6 /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
 		C267BA11274A70E600D188E6 /* SuperPayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayRepository.swift; sourceTree = "<group>"; };
+		C28BFAC92756975000D453FF /* CX */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CX; path = MiniSuperApp/CX; sourceTree = "<group>"; };
+		C28BFACA2756978A00D453FF /* Finance */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Finance; path = MiniSuperApp/Finance; sourceTree = "<group>"; };
+		C28BFACB2756979E00D453FF /* Transport */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Transport; path = MiniSuperApp/Transport; sourceTree = "<group>"; };
+		C28BFACC275697AB00D453FF /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Profile; path = MiniSuperApp/Profile; sourceTree = "<group>"; };
+		C28BFACD275697B900D453FF /* Platform */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Platform; path = MiniSuperApp/Platform; sourceTree = "<group>"; };
 		C29AEC5A2728E7A100637492 /* SuperPayDashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardRouter.swift; sourceTree = "<group>"; };
 		C29AEC5B2728E7A100637492 /* SuperPayDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardViewController.swift; sourceTree = "<group>"; };
 		C29AEC5C2728E7A100637492 /* SuperPayDashboardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperPayDashboardBuilder.swift; sourceTree = "<group>"; };
@@ -329,6 +334,11 @@
 		F5829F4C26DB2BC400BFA8CD = {
 			isa = PBXGroup;
 			children = (
+				C28BFACD275697B900D453FF /* Platform */,
+				C28BFACC275697AB00D453FF /* Profile */,
+				C28BFACB2756979E00D453FF /* Transport */,
+				C28BFACA2756978A00D453FF /* Finance */,
+				C28BFAC92756975000D453FF /* CX */,
 				F5829F5726DB2BC400BFA8CD /* MiniSuperApp */,
 				F5829F5626DB2BC400BFA8CD /* Products */,
 			);
