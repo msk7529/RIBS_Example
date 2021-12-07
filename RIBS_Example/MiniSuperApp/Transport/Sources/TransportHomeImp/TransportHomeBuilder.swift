@@ -1,4 +1,5 @@
 import ModernRIBs
+import TransportHome
 
 public protocol TransportHomeDependency: Dependency {
 }
@@ -8,11 +9,6 @@ final class TransportHomeComponent: Component<TransportHomeDependency> {
 }
 
 // MARK: - Builder
-
-public protocol TransportHomeBuildable: Buildable {
-    func build(withListener listener: TransportHomeListener) -> ViewableRouting
-}
-
 public final class TransportHomeBuilder: Builder<TransportHomeDependency>, TransportHomeBuildable {
     
     public override init(dependency: TransportHomeDependency) {
