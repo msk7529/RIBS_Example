@@ -1,5 +1,7 @@
+import AppHome
 import FinanceHome
 import ModernRIBs
+import ProfileHome
 import RIBsUtil
 
 protocol AppRootInteractable: Interactable,

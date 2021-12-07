@@ -1,6 +1,8 @@
+import AppHome
 import FinanceRepository
 import FinanceHome
 import ModernRIBs
+import ProfileHome
 import UIKit
 
 protocol AppRootDependency: Dependency {
