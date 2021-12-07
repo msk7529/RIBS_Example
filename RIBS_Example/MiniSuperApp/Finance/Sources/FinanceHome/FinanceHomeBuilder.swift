@@ -4,7 +4,7 @@ import FinanceRepository
 import ModernRIBs
 import Topup
 
-protocol FinanceHomeDependency: Dependency {
+public protocol FinanceHomeDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
 }
@@ -32,17 +32,17 @@ final class FinanceHomeComponent: Component<FinanceHomeDependency>, SuperPayDash
 
 // MARK: - Builder
 
-protocol FinanceHomeBuildable: Buildable {
-    func build(withListener listener: FinanceHomeListener) -> FinanceHomeRouting
+public protocol FinanceHomeBuildable: Buildable {
+    func build(withListener listener: FinanceHomeListener) -> ViewableRouting
 }
 
-final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuildable {
+public final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHomeBuildable {
     
-    override init(dependency: FinanceHomeDependency) {
+    public override init(dependency: FinanceHomeDependency) {
         super.init(dependency: dependency)
     }
     
-    func build(withListener listener: FinanceHomeListener) -> FinanceHomeRouting {
+    public func build(withListener listener: FinanceHomeListener) -> ViewableRouting {
         let viewController = FinanceHomeViewController()
                 
         let component = FinanceHomeComponent(dependency: dependency,
