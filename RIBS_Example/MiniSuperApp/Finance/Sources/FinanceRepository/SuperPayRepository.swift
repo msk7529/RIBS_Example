@@ -9,13 +9,13 @@ import Combine
 import Foundation
 import CombineUtil
 
-protocol SuperPayRepository {
+public protocol SuperPayRepository {
     var balance: ReadOnlyCurrentValuePublisher<Double> { get }
     func topup(amount: Double, paymentMethodID: String) -> AnyPublisher<Void, Error>
 }
 
-final class SuperPayRepositoryImp: SuperPayRepository {
-    var balance: ReadOnlyCurrentValuePublisher<Double> {
+public final class SuperPayRepositoryImp: SuperPayRepository {
+    public var balance: ReadOnlyCurrentValuePublisher<Double> {
         return balanceSubject
     }
     
@@ -23,7 +23,9 @@ final class SuperPayRepositoryImp: SuperPayRepository {
     
     private let bgQueue = DispatchQueue(label: "topup.repository.queue")
     
-    func topup(amount: Double, paymentMethodID: String) -> AnyPublisher<Void, Error> {
+    public init () { }
+    
+    public func topup(amount: Double, paymentMethodID: String) -> AnyPublisher<Void, Error> {
         return Future<Void, Error> { [weak self] promise in
             self?.bgQueue.async {
                 Thread.sleep(forTimeInterval: 2)

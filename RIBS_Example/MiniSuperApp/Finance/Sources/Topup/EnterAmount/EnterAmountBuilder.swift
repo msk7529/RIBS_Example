@@ -7,6 +7,7 @@
 
 import CombineUtil
 import FinanceEntity
+import FinanceRepository
 import ModernRIBs
 
 protocol EnterAmountDependency: Dependency {

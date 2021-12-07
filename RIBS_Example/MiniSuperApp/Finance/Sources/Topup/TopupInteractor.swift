@@ -12,7 +12,7 @@ import ModernRIBs
 import RIBsUtil
 import SuperUI
 
-protocol TopupRouting: Routing {
+public protocol TopupRouting: Routing {
     func cleanupViews()
     func attachAddPaymentMethod(closeButtonType: DismissButtonType)
     func detachAddPaymentMethod()
@@ -23,7 +23,7 @@ protocol TopupRouting: Routing {
     func popToRoot()
 }
 
-protocol TopupListener: AnyObject {
+public protocol TopupListener: AnyObject {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     func topupDidClose()
     func topupDidFinish()
