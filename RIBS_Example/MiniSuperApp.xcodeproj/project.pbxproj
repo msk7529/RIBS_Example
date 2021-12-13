@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C267B6BB2741C34100D188E6 /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C267B6BA2741C34100D188E6 /* Array+Utils.swift */; };
+		C26C00B72767BD8800C56FD7 /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = C26C00B62767BD8800C56FD7 /* Network */; };
+		C26C00B92767BD8800C56FD7 /* NetworkImp in Frameworks */ = {isa = PBXBuildFile; productRef = C26C00B82767BD8800C56FD7 /* NetworkImp */; };
 		C28384A6275FB68F00B54967 /* Topup in Frameworks */ = {isa = PBXBuildFile; productRef = C28384A5275FB68F00B54967 /* Topup */; };
 		C28384A8275FBCD500B54967 /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = C28384A7275FBCD500B54967 /* FinanceHome */; };
 		C28384AC275FC3BF00B54967 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = C28384AB275FC3BF00B54967 /* TransportHome */; };
@@ -67,6 +69,8 @@
 				C28BFAD22756A4C800D453FF /* FinanceEntity in Frameworks */,
 				C28BFADA2756A4C800D453FF /* SuperUI in Frameworks */,
 				C28384AC275FC3BF00B54967 /* TransportHome in Frameworks */,
+				C26C00B72767BD8800C56FD7 /* Network in Frameworks */,
+				C26C00B92767BD8800C56FD7 /* NetworkImp in Frameworks */,
 				F5829F6E26DB2DE900BFA8CD /* ModernRIBs in Frameworks */,
 				C28BFAD82756A4C800D453FF /* RIBsUtil in Frameworks */,
 				C28384B2275FC88500B54967 /* AppHome in Frameworks */,
@@ -180,6 +184,8 @@
 				C28384B1275FC88500B54967 /* AppHome */,
 				C28384B3275FC88500B54967 /* ProfileHome */,
 				C28384B7275FD6F700B54967 /* TransportHomeImp */,
+				C26C00B62767BD8800C56FD7 /* Network */,
+				C26C00B82767BD8800C56FD7 /* NetworkImp */,
 			);
 			productName = SuperRedApp;
 			productReference = F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */;
@@ -460,6 +466,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C26C00B62767BD8800C56FD7 /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
+		C26C00B82767BD8800C56FD7 /* NetworkImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkImp;
+		};
 		C28384A5275FB68F00B54967 /* Topup */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Topup;

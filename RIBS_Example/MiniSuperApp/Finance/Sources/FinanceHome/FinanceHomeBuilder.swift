@@ -1,8 +1,11 @@
 import CombineUtil
 import AddPaymentMethod
 import FinanceRepository
+import Foundation
 import ModernRIBs
 import Topup
+import Network
+import NetworkImp
 
 public protocol FinanceHomeDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
@@ -44,10 +47,17 @@ public final class FinanceHomeBuilder: Builder<FinanceHomeDependency>, FinanceHo
     
     public func build(withListener listener: FinanceHomeListener) -> ViewableRouting {
         let viewController = FinanceHomeViewController()
-                
+        
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [SuperAppURLProtocol.self]
+        
+        setupURLProtocol()
+        
+        let network = NetworkImp(session: URLSession(configuration: config))
+        
         let component = FinanceHomeComponent(dependency: dependency,
                                              cardOnFileRepository: CardOnFileRepositoryImp(),
-                                             superPayRepository: SuperPayRepositoryImp(),
+                                             superPayRepository: SuperPayRepositoryImp(network: network, baseURL: BaseURL().financeBaseURL),
                                              topupBaseViewController: viewController)
         let interactor = FinanceHomeInteractor(presenter: viewController)
         interactor.listener = listener

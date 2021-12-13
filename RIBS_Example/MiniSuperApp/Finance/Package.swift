@@ -55,6 +55,7 @@ let package = Package(
                 "FinanceRepository",
                 "AddPaymentMethod",
                 "Topup",
+                .product(name: "Network", package: "Platform"),
                 .product(name: "RIBsUtil", package: "Platform"),
                 .product(name: "SuperUI", package: "Platform"),
             ]),
@@ -66,7 +67,8 @@ let package = Package(
             name: "FinanceRepository",
             dependencies: [
                 "FinanceEntity",
-                .product(name: "CombineUtil", package: "Platform")
+                .product(name: "Network", package: "Platform"),
+                .product(name: "CombineUtil", package: "Platform"),
             ]),
     ]
 )
