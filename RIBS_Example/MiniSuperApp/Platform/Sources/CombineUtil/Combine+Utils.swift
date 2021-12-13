@@ -2,14 +2,14 @@
 //  Combine+Utils.swift
 //  MiniSuperApp
 //
-//  Created by kakao on 2021/10/27.
+//  Created on 2021/10/27.
 //
 
 /*
-CurrentValueSubject의 변형. subscriber들이 가장 최신의 값에 접근할 수 있도록 하되, 직접 값을 send할 수 없도록 한다.
-Combine만을 사용하면 불가능해서 CombineExt를 import
+ CurrentValueSubject의 변형. subscriber들이 가장 최신의 값에 접근할 수 있도록 하되, 직접 값을 send할 수 없도록 한다.
+ Combine만을 사용하면 불가능해서 CombineExt를 import
  
-*/
+ */
 
 import Combine
 import CombineExt
