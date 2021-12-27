@@ -5,11 +5,12 @@
 //  Created by kakao on 2021/12/27.
 //
 
+import CombineUtil
+import CombineSchedulers
 import Foundation
 import FinanceEntity
 import FinanceRepository
 import FinanceRepositoryTestSupport
-import CombineUtil
 @testable import TopupImp
 
 final class EnterAmountPresentableMock: EnterAmountPresentable {
@@ -48,6 +49,10 @@ final class EnterAmountDependencyMock: EnterAmountInteractorDependency {
     }
     
     var superPayRepository: SuperPayRepository = SuperPayRepositoryMock()
+    
+    var mainQueue: AnySchedulerOf<DispatchQueue> {
+        return .immediate   // 테스트시에는 immediate큐를 넣어준다. 동기적으로 실행될 수 있도록
+    }
 }
 
 final class EnterAmountListenerMock: EnterAmountListener {

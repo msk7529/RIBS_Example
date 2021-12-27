@@ -18,7 +18,7 @@ final class EnterAmountInteractorTests: XCTestCase {
     private var listener: EnterAmountListenerMock!
     
     private var repository: SuperPayRepositoryMock! {
-        return dependency.superPayRepository as! SuperPayRepositoryMock
+        return dependency.superPayRepository as? SuperPayRepositoryMock
     }
     
     // TODO: declare other objects and mocks you need as private vars
@@ -62,7 +62,8 @@ final class EnterAmountInteractorTests: XCTestCase {
         sut.didTapTopup(with: 1000000)
         
         // then
-        _ = XCTWaiter.wait(for: [expectation(description: "Wait 0.1 second")], timeout: 0.1)
+        //_ = XCTWaiter.wait(for: [expectation(description: "Wait 0.1 second")], timeout: 0.1)
+        // Combine Scheduler(.immediate)를 사용함으로써 동기적으로 코드가 실행될 수 있도록 하여, 위 코드를 제거할 수 있다. 매 테스트시마다 동일한 결과를 얻을 수 있음
         XCTAssertEqual(presenter.startLoadingCallCount, 1)
         XCTAssertEqual(presenter.stopLoadingCallCount, 1)
         XCTAssertEqual(repository.topupCallCount, 1)

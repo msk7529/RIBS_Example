@@ -8,6 +8,7 @@
 import Foundation
 import ModernRIBs
 import AppHome
+import CombineSchedulers
 import FinanceHome
 import ProfileHome
 import FinanceRepository
@@ -41,6 +42,10 @@ final class AppRootComponent: Component<AppRootDependency>, AppHomeDependency, F
     lazy var addPaymentMethodBuildable: AddPaymentMethodBuildable = {
         return AddPaymentMethodBuilder(dependency: self)
     }()
+    
+    var mainQueue: AnySchedulerOf<DispatchQueue> {
+        .main   // 테스트가 아닌 실제앱에서는 메인큐를 넣어준다.
+    }
     
     init(
         dependency: AppRootDependency,

@@ -35,12 +35,14 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/CombineCommunity/CombineExt.git", from: "1.0.0"),
         .package(name: "ModernRIBs", url: "https://github.com/DevYeom/ModernRIBs.git", .exact("1.0.1")),
+        .package(url: "https://github.com/pointfreeco/combine-schedulers.git", from: "0.5.3"),
     ],
     targets: [
         .target(
             name: "CombineUtil",
             dependencies: [
-                "CombineExt"
+                "CombineExt",
+                .product(name: "CombineSchedulers", package: "combine-schedulers", condition: nil)
             ]
         ),
         .target(
