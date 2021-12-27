@@ -21,9 +21,4 @@ final class EnterAmountRouterTests: XCTestCase {
     }
 
     // MARK: - Tests
-
-    func test_routeToExample_invokesToExampleResult() {
-        // This is an example of a router test case.
-        // Test your router functions invokes the corresponding builder, attachesChild, presents VC, etc.
-    }
 }
