@@ -104,6 +104,6 @@ final class EnterAmountInteractorTests: XCTestCase {
         sut.didTapPaymentMethod()
         
         // then
-        XCTAssertEqual(listener.enterAmountDidTapPaymentMehoedCallCount, 1)
+        XCTAssertEqual(listener.enterAmountDidTapPaymentMethodCallCount, 1)
     }
 }

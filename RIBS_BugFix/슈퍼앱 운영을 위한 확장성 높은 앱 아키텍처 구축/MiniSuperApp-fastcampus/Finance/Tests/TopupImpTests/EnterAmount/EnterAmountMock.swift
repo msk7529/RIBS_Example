@@ -62,9 +62,9 @@ final class EnterAmountListenerMock: EnterAmountListener {
         enterAmountDidTapCloseCallCount += 1
     }
     
-    var enterAmountDidTapPaymentMehoedCallCount: Int = 0
-    func enterAmountDidTapPaymentMehoed() {
-        enterAmountDidTapPaymentMehoedCallCount += 1
+    var enterAmountDidTapPaymentMethodCallCount: Int = 0
+    func enterAmountDidTapPaymentMethod() {
+        enterAmountDidTapPaymentMethodCallCount += 1
     }
     
     var enterAmountDidFinishTopupCallCount: Int = 0

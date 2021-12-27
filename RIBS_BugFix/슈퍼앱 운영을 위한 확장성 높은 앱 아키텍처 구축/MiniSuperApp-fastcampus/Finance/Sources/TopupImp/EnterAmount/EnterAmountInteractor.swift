@@ -27,7 +27,7 @@ protocol EnterAmountPresentable: Presentable {
 
 protocol EnterAmountListener: AnyObject {
     func enterAmountDidTapClose()
-    func enterAmountDidTapPaymentMehoed()
+    func enterAmountDidTapPaymentMethod()
     func enterAmountDidFinishTopup()
 }
 
@@ -73,7 +73,7 @@ final class EnterAmountInteractor: PresentableInteractor<EnterAmountPresentable>
     }
     
     func didTapPaymentMethod() {
-        listener?.enterAmountDidTapPaymentMehoed()
+        listener?.enterAmountDidTapPaymentMethod()
     }
     
     func didTapTopup(with amount: Double) {
