@@ -146,6 +146,7 @@ let package = Package(
                 "TopupTestSupport",
                 "AddPaymentMethodTestSupport",
                 .product(name: "RIBsTestSupport", package: "Platform"),
+                .product(name: "PlatformTestSupport", package: "Platform"),
             ]
         )
     ]
