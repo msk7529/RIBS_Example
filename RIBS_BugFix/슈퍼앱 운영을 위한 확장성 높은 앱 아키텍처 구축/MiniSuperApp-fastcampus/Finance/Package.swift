@@ -147,6 +147,11 @@ let package = Package(
                 "AddPaymentMethodTestSupport",
                 .product(name: "RIBsTestSupport", package: "Platform"),
                 .product(name: "PlatformTestSupport", package: "Platform"),
+            ],
+            exclude: [
+                // 테스트 빌드시 빌드워닝제거를 위함
+                "EnterAmount/__Snapshots__",
+                "CardOnFile/__Snapshots__"
             ]
         )
     ]
