@@ -50,6 +50,7 @@ final class EnterAmountViewController: UIViewController, EnterAmountPresentable,
         cta.setBackgroundImage(UIImage(color: .primaryRed), for: .normal)
         cta.tintColor = .white
         cta.addTarget(self, action: #selector(didTapCTAButton), for: .touchUpInside)
+        cta.accessibilityIdentifier = "topup_enteramount_confirm_button"
         return cta
     }()
     
