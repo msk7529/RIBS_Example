@@ -30,6 +30,16 @@
 		20EBAA1C275E66C100C33688 /* FinanceHome in Frameworks */ = {isa = PBXBuildFile; productRef = 20EBAA1B275E66C100C33688 /* FinanceHome */; };
 		20EBAA20275E686A00C33688 /* TransportHome in Frameworks */ = {isa = PBXBuildFile; productRef = 20EBAA1F275E686A00C33688 /* TransportHome */; };
 		20EBAA22275E6B5000C33688 /* AppHome in Frameworks */ = {isa = PBXBuildFile; productRef = 20EBAA21275E6B5000C33688 /* AppHome */; };
+		C2063CBB278A0557003E1184 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2063CBA278A0557003E1184 /* AppDelegate.swift */; };
+		C2063CC4278A0559003E1184 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2063CC3278A0559003E1184 /* Assets.xcassets */; };
+		C2063CC7278A0559003E1184 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2063CC5278A0559003E1184 /* LaunchScreen.storyboard */; };
+		C2063CD4278A05F4003E1184 /* AddPaymentMethodIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2063CD3278A05F4003E1184 /* AddPaymentMethodIntegrationTests.swift */; };
+		C2063CDC278A0674003E1184 /* PlatformTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CDB278A0674003E1184 /* PlatformTestSupport */; };
+		C2063CDE278A0800003E1184 /* AddPaymentMethod in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CDD278A0800003E1184 /* AddPaymentMethod */; };
+		C2063CE0278A0800003E1184 /* AddPaymentMethodImp in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CDF278A0800003E1184 /* AddPaymentMethodImp */; };
+		C2063CE2278A0800003E1184 /* AddPaymentMethodTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CE1278A0800003E1184 /* AddPaymentMethodTestSupport */; };
+		C2063CE4278A084F003E1184 /* FinanceRepository in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CE3278A084F003E1184 /* FinanceRepository */; };
+		C2063CE6278A084F003E1184 /* FinanceRepositoryTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C2063CE5278A084F003E1184 /* FinanceRepositoryTestSupport */; };
 		C274090B2784B205000EC713 /* MiniSuperAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C274090A2784B205000EC713 /* MiniSuperAppUITests.swift */; };
 		C27409162784B2FF000EC713 /* TopupImpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27409152784B2FF000EC713 /* TopupImpUITests.swift */; };
 		C274091B2784B8D7000EC713 /* PlatformTestSupport in Frameworks */ = {isa = PBXBuildFile; productRef = C274091A2784B8D7000EC713 /* PlatformTestSupport */; };
@@ -48,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C2063CD5278A05F4003E1184 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5829F4D26DB2BC400BFA8CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2063CB7278A0556003E1184;
+			remoteInfo = TestHost;
+		};
 		C274090E2784B205000EC713 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5829F4D26DB2BC400BFA8CD /* Project object */;
@@ -68,6 +85,13 @@
 		20AA4C54275E4472001555AA /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Profile; sourceTree = "<group>"; };
 		20AA4C55275E4489001555AA /* Platform */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Platform; sourceTree = "<group>"; };
 		20AA4C56275E451E001555AA /* Transport */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Transport; sourceTree = "<group>"; };
+		C2063CB8278A0556003E1184 /* TestHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2063CBA278A0557003E1184 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2063CC3278A0559003E1184 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2063CC6278A0559003E1184 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2063CC8278A0559003E1184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2063CD1278A05F4003E1184 /* AddPaymentMethodIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddPaymentMethodIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2063CD3278A05F4003E1184 /* AddPaymentMethodIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPaymentMethodIntegrationTests.swift; sourceTree = "<group>"; };
 		C27409082784B205000EC713 /* MiniSuperAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSuperAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C274090A2784B205000EC713 /* MiniSuperAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniSuperAppUITests.swift; sourceTree = "<group>"; };
 		C27409152784B2FF000EC713 /* TopupImpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopupImpUITests.swift; sourceTree = "<group>"; };
@@ -87,6 +111,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C2063CB5278A0556003E1184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2063CCE278A05F4003E1184 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2063CE2278A0800003E1184 /* AddPaymentMethodTestSupport in Frameworks */,
+				C2063CE6278A084F003E1184 /* FinanceRepositoryTestSupport in Frameworks */,
+				C2063CE0278A0800003E1184 /* AddPaymentMethodImp in Frameworks */,
+				C2063CDE278A0800003E1184 /* AddPaymentMethod in Frameworks */,
+				C2063CDC278A0674003E1184 /* PlatformTestSupport in Frameworks */,
+				C2063CE4278A084F003E1184 /* FinanceRepository in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C27409052784B205000EC713 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +175,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C2063CB9278A0557003E1184 /* TestHost */ = {
+			isa = PBXGroup;
+			children = (
+				C2063CBA278A0557003E1184 /* AppDelegate.swift */,
+				C2063CC3278A0559003E1184 /* Assets.xcassets */,
+				C2063CC5278A0559003E1184 /* LaunchScreen.storyboard */,
+				C2063CC8278A0559003E1184 /* Info.plist */,
+			);
+			path = TestHost;
+			sourceTree = "<group>";
+		};
+		C2063CD2278A05F4003E1184 /* AddPaymentMethodIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2063CD3278A05F4003E1184 /* AddPaymentMethodIntegrationTests.swift */,
+			);
+			path = AddPaymentMethodIntegrationTests;
+			sourceTree = "<group>";
+		};
 		C27409092784B205000EC713 /* MiniSuperAppUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +232,8 @@
 				20AA4C51275E440C001555AA /* CX */,
 				F5829F5726DB2BC400BFA8CD /* MiniSuperApp */,
 				C27409092784B205000EC713 /* MiniSuperAppUITests */,
+				C2063CB9278A0557003E1184 /* TestHost */,
+				C2063CD2278A05F4003E1184 /* AddPaymentMethodIntegrationTests */,
 				F5829F5626DB2BC400BFA8CD /* Products */,
 				20EBAA0C275E45F400C33688 /* Frameworks */,
 			);
@@ -179,6 +244,8 @@
 			children = (
 				F5829F5526DB2BC400BFA8CD /* MiniSuperApp.app */,
 				C27409082784B205000EC713 /* MiniSuperAppUITests.xctest */,
+				C2063CB8278A0556003E1184 /* TestHost.app */,
+				C2063CD1278A05F4003E1184 /* AddPaymentMethodIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,6 +290,49 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C2063CB7278A0556003E1184 /* TestHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2063CCC278A0559003E1184 /* Build configuration list for PBXNativeTarget "TestHost" */;
+			buildPhases = (
+				C2063CB4278A0556003E1184 /* Sources */,
+				C2063CB5278A0556003E1184 /* Frameworks */,
+				C2063CB6278A0556003E1184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestHost;
+			productName = TestHost;
+			productReference = C2063CB8278A0556003E1184 /* TestHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2063CD0278A05F4003E1184 /* AddPaymentMethodIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2063CD7278A05F4003E1184 /* Build configuration list for PBXNativeTarget "AddPaymentMethodIntegrationTests" */;
+			buildPhases = (
+				C2063CCD278A05F4003E1184 /* Sources */,
+				C2063CCE278A05F4003E1184 /* Frameworks */,
+				C2063CCF278A05F4003E1184 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2063CD6278A05F4003E1184 /* PBXTargetDependency */,
+			);
+			name = AddPaymentMethodIntegrationTests;
+			packageProductDependencies = (
+				C2063CDB278A0674003E1184 /* PlatformTestSupport */,
+				C2063CDD278A0800003E1184 /* AddPaymentMethod */,
+				C2063CDF278A0800003E1184 /* AddPaymentMethodImp */,
+				C2063CE1278A0800003E1184 /* AddPaymentMethodTestSupport */,
+				C2063CE3278A084F003E1184 /* FinanceRepository */,
+				C2063CE5278A084F003E1184 /* FinanceRepositoryTestSupport */,
+			);
+			productName = AddPaymentMethodIntegrationTests;
+			productReference = C2063CD1278A05F4003E1184 /* AddPaymentMethodIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C27409072784B205000EC713 /* MiniSuperAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C27409122784B205000EC713 /* Build configuration list for PBXNativeTarget "MiniSuperAppUITests" */;
@@ -291,6 +401,13 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					C2063CB7278A0556003E1184 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					C2063CD0278A05F4003E1184 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = C2063CB7278A0556003E1184;
+					};
 					C27409072784B205000EC713 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = F5829F5426DB2BC400BFA8CD;
@@ -319,11 +436,29 @@
 			targets = (
 				F5829F5426DB2BC400BFA8CD /* MiniSuperApp */,
 				C27409072784B205000EC713 /* MiniSuperAppUITests */,
+				C2063CB7278A0556003E1184 /* TestHost */,
+				C2063CD0278A05F4003E1184 /* AddPaymentMethodIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C2063CB6278A0556003E1184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2063CC7278A0559003E1184 /* LaunchScreen.storyboard in Resources */,
+				C2063CC4278A0559003E1184 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2063CCF278A05F4003E1184 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C27409062784B205000EC713 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +480,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C2063CB4278A0556003E1184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2063CBB278A0557003E1184 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2063CCD278A05F4003E1184 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2063CD4278A05F4003E1184 /* AddPaymentMethodIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C27409042784B205000EC713 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +527,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C2063CD6278A05F4003E1184 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2063CB7278A0556003E1184 /* TestHost */;
+			targetProxy = C2063CD5278A05F4003E1184 /* PBXContainerItemProxy */;
+		};
 		C274090F2784B205000EC713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F5829F5426DB2BC400BFA8CD /* MiniSuperApp */;
@@ -384,6 +540,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C2063CC5278A0559003E1184 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2063CC6278A0559003E1184 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		F5829F6326DB2BC500BFA8CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -395,6 +559,168 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C2063CC9278A0559003E1184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestHost/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.TestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2063CCA278A0559003E1184 /* UITESTING */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestHost/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.TestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = UITESTING;
+		};
+		C2063CCB278A0559003E1184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestHost/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.TestHost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2063CD8278A05F4003E1184 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.AddPaymentMethodIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHost.app/TestHost";
+			};
+			name = Debug;
+		};
+		C2063CD9278A05F4003E1184 /* UITESTING */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.AddPaymentMethodIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHost.app/TestHost";
+			};
+			name = UITESTING;
+		};
+		C2063CDA278A05F4003E1184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K6448RX2CR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.msk7529.AddPaymentMethodIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestHost.app/TestHost";
+			};
+			name = Release;
+		};
 		C27409102784B205000EC713 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -701,6 +1027,26 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C2063CCC278A0559003E1184 /* Build configuration list for PBXNativeTarget "TestHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2063CC9278A0559003E1184 /* Debug */,
+				C2063CCA278A0559003E1184 /* UITESTING */,
+				C2063CCB278A0559003E1184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2063CD7278A05F4003E1184 /* Build configuration list for PBXNativeTarget "AddPaymentMethodIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2063CD8278A05F4003E1184 /* Debug */,
+				C2063CD9278A05F4003E1184 /* UITESTING */,
+				C2063CDA278A05F4003E1184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C27409122784B205000EC713 /* Build configuration list for PBXNativeTarget "MiniSuperAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -825,6 +1171,30 @@
 		20EBAA21275E6B5000C33688 /* AppHome */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = AppHome;
+		};
+		C2063CDB278A0674003E1184 /* PlatformTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlatformTestSupport;
+		};
+		C2063CDD278A0800003E1184 /* AddPaymentMethod */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AddPaymentMethod;
+		};
+		C2063CDF278A0800003E1184 /* AddPaymentMethodImp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AddPaymentMethodImp;
+		};
+		C2063CE1278A0800003E1184 /* AddPaymentMethodTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AddPaymentMethodTestSupport;
+		};
+		C2063CE3278A084F003E1184 /* FinanceRepository */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceRepository;
+		};
+		C2063CE5278A084F003E1184 /* FinanceRepositoryTestSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FinanceRepositoryTestSupport;
 		};
 		C274091A2784B8D7000EC713 /* PlatformTestSupport */ = {
 			isa = XCSwiftPackageProductDependency;

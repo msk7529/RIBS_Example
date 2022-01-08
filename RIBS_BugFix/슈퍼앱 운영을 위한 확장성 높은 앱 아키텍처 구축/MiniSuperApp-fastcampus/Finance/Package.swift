@@ -78,6 +78,7 @@ let package = Package(
             dependencies: [
                 "ModernRIBs",
                 "FinanceEntity",
+                .product(name: "RIBsTestSupport", package: "Platform"),
                 .product(name: "RIBsUtil", package: "Platform"),
             ]
         ),

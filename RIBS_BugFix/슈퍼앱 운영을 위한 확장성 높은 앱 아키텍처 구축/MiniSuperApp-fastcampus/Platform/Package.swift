@@ -46,6 +46,7 @@ let package = Package(
         .package(url: "https://github.com/pointfreeco/combine-schedulers.git", from: "0.5.3"),
         .package(name: "SnapshotTesting", url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.9.0"),
         .package(name: "Swifter", url: "https://github.com/httpswift/swifter.git", from: "1.5.0"),
+        .package(name: "Hammer", url: "https://github.com/lyft/Hammer.git", from: "0.13.2"),
     ],
     targets: [
         .target(
@@ -72,6 +73,7 @@ let package = Package(
             dependencies: [
                 "SnapshotTesting",
                 "Swifter",
+                "Hammer",
             ]
         ),
         .target(
